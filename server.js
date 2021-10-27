@@ -6,11 +6,10 @@ const express = require('express');
 const app = express();
 
 
-//   ../..
 
 //ya podemos acceder a metodos usados para hacer un servidor incluyendo su nombre despues de app.
 
 //The app.listen method will start up the server locally on the port you give as its first argument 
-app.listen(8000,function){
+app.listen(8000,function(){
 console.log("server is running");
-}
+})
