@@ -5,6 +5,18 @@ const express = require('express');
 //con esto creamos una instancia del constructor express con nombre APP
 const app = express();
 
+const mockUserData=[
+    {name:'Mark'},
+    {name:'Jill'}
+    ]
+    app.get('/users', function(req,res){
+         res.json({
+              success: true,
+              message: 'successfully got users. Nice!',
+              users: mockUserData
+         })
+    })
+
 
 
 //ya podemos acceder a metodos usados para hacer un servidor incluyendo su nombre despues de app.
@@ -13,3 +25,4 @@ const app = express();
 app.listen(8000,function(){
 console.log("server is running");
 })
+
